@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>{{data.name}}</h2>
+<mat-dialog-content class="body-content">
+    <div class="data-container">
+        <span class="data-title">Expectativa de vida</span>
+        <span class="data-value">{{data.life_span}}</span>
+    </div>
+
+    <div class="data-container">
+        <span class="data-title">Origem da raça</span>
+        <span class="data-value">{{data.origin ?? 'Unknown'}}</span>
+    </div>
+
+    <div class="data-container">
+        <span class="data-title">Habilidades</span>
+        <span class="data-value">{{data.bred_for ?? ' - '}}</span>
+    </div>
+
+    <div class="data-container">
+        <span class="data-title">altura</span>
+        <span class="data-value">{{data.height?.metric}} cm</span>
+    </div>
+
+    <div class="data-container">
+        <span class="data-title">peso</span>
+        <span class="data-value">{{data.weight?.metric}} kg</span>
+    </div>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Entendi</button>
+</mat-dialog-actions>

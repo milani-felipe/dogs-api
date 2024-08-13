@@ -1,0 +1,21 @@
+<div class="container">
+
+    <div class="grid">
+        @for (item of dogsList; track item.name) {
+        <app-card [dogSpecs]="item"></app-card>
+        } @empty {
+        <li>There are no items.</li>
+        }
+    </div>
+
+    <div class="paginator">
+        <button [disabled]="isLoading || currentPage === 0" mat-icon-button aria-label="previous" (click)="previous()">
+            <mat-icon class="arrow" fontIcon="chevron_left"></mat-icon>
+        </button>
+        {{currentPage + 1}}
+        <button [disabled]="isLoading " mat-icon-button aria-label="next" (click)="next()">
+            <mat-icon class="arrow" fontIcon="chevron_right"></mat-icon>
+        </button>
+    </div>
+
+</div>
